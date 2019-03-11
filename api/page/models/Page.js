@@ -14,7 +14,7 @@ module.exports = {
   afterSave: async (model, response, options) => {
     var exec = require('child_process').exec, child;
 
-    child = exec('cd .. && git clone https://github.com/vedran-brnjetic/ultramaterials.git ./boiler && cd boiler && sudo npm i',
+    child = exec('cd .. && git clone https://github.com/vedran-brnjetic/ultramaterials.git ./boiler && cd boiler && npm i',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
