@@ -11,7 +11,19 @@ module.exports = {
 
   // After saving a value.
   // Fired after an `insert` or `update` query.
-  // afterSave: async (model, response, options) => {},
+  afterSave: async (model, response, options) => {
+    var exec = require('child_process').exec, child;
+
+    child = exec('cd .. && git clone https://github.com/vedran-brnjetic/ultramaterials.git',
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
+    child();
+  },
 
   // Before fetching a value.
   // Fired before a `fetch` operation.
