@@ -25,6 +25,10 @@
     "event_start": {
       "default": "",
       "type": "date"
+    },
+    "challenges": {
+      "collection": "challenge",
+      "via": "event"
     }
   }
 }

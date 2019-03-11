@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/challenges",
+      "handler": "Challenge.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/challenges/count",
+      "handler": "Challenge.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/challenges/:id",
+      "handler": "Challenge.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/challenges",
+      "handler": "Challenge.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/challenges/:id",
+      "handler": "Challenge.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/challenges/:id",
+      "handler": "Challenge.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
