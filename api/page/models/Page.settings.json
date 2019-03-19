@@ -27,6 +27,10 @@
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "internal_path": {
+      "default": "",
+      "type": "string"
     }
   }
 }
